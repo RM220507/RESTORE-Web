@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title>RE:STORE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main_styles.css" />
+        <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#news">What We Do</a></li>
+                <li><a class="active" href="index.html">RE:STORE</a></li>
+                <li><a href="#contact">What's On</a></li>
+                <li><a href="#about">Contact Us</a></li>
+            </ul>
+        </nav>
+        <section class="main-header">
+            <div id="hover-effect" class="header-gradient"></div>
+            <img class="main-background" src="main_background.png" />
+            <script>
+                let div = document.getElementById('hover-effect')
+                div.onmousemove = e => {
+                    let rect = e.target.getBoundingClientRect();
+                    let x = e.clientX - rect.left;
+                    let y = e.clientY - rect.top;
+                    div.style.setProperty('--x', x + 'px');
+                    div.style.setProperty('--y', y + 'px');
+                };
+            </script>
+        </section>
+    </body>
+</html>

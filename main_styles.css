@@ -1,0 +1,163 @@
+body {
+    background-color: black;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.main-header {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.main-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.header-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+}
+
+.header-gradient span {
+    position: absolute;
+}
+
+.header-gradient::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #041c2c, #041c2c 50%, transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+.header-gradient:hover::before {
+    --size: 400px;
+}
+
+.about-section {
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%), url("images/cafe3.jpeg");
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-text {
+    font-size: 20px;
+    padding: 2%;
+    width: 50%;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+li {
+    font-size: 20px;
+    height: 100%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background: linear-gradient(#041c2c 0%, rgba(0,0,0,0) 100%);
+}
+
+.active {
+    background: linear-gradient(#041c2c 0%, rgba(0,0,0,0) 100%);
+}
+
+.trustee-view {
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(12, 7.5%);
+    grid-template-rows: repeat(20, 5%);
+    border-radius: 50px;
+    background-color: #E2E2EF;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.trustee-view-wrapper {
+    width: 45%;
+    aspect-ratio: 2 / 3;
+    position: absolute;
+    left: calc(50% - calc(45% / 2));
+}
+
+.trustee-left-arrow {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.trustee-arrow {
+    font-size: 100px;
+    text-align: center;
+    padding-top: calc(50% - 4rem);
+    margin: 1rem;
+}
+
+.trustee-arrow:hover {
+    background: #111;
+}
+
+.trustee-image {
+    grid-column: 2 / 8;
+    grid-row: 2 / 6;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.trustee-name {
+    grid-column: 2 / 13;
+    grid-row: 11;
+    font-size: 40px;
+}
+
+.trustee-bio {
+    grid-column: 2 / 13;
+    grid-row: 13;
+    font-size: 20px;
+}
+
+.trustee-right-arrow {
+    grid-column: 4;
+    grid-row: 1 / 3;
+}
