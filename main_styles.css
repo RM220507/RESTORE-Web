@@ -1,13 +1,20 @@
 body {
-    background-color: black;
+    background-color: #f0f0f0;
     font-family: sans-serif;
     margin: 0;
+}
+
+root {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .main-header {
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    margin-top: 80px;
+    background-color: black;
 }
 
 .main-background {
@@ -16,6 +23,7 @@ body {
     position: absolute;
     object-fit: contain;
     pointer-events: none;
+    z-index: 0;
 }
 
 .header-gradient {
@@ -55,61 +63,67 @@ body {
 }
 
 .about-section {
-    background-image: linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 1) 50%,
-            rgba(0, 0, 0, 0) 100%
-        ),
-        url("images/cafe3.jpeg");
-    background-position-x: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-top: 80px;
+}
+
+.search-section {
+    margin-top: 80px;
+}
+
+.search-box {
+    width: 50%;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 20px;
 }
 
 .section-text {
-    font-size: 20px;
-    padding: 2%;
-    width: 50%;
-    color: white;
+    text-align: center;
+    font-size: 22px;
+    color: #041c2c;
+    padding: 20px 15%;
+}
+
+.banner-image {
+    width: 90%;
+    padding: 10px 5%;
+}
+
+.background-container {
+    background-image: url("main_background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f0f0f0;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: 80px;
 }
 
 h1 {
     font-size: 40px;
-    color: white;
+    color: #041c2c;
     font-weight: bold;
     text-align: center;
+    padding-top: 10px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #111;
+.contact-frame {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    padding: 0 5%;
+    width: 90%;
 }
 
-li {
-    font-size: 20px;
-    height: 100%;
+.contact-element {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+    font-size: 22px;
+    color: #041c2c;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background: linear-gradient(#041c2c 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.active {
-    background: linear-gradient(#041c2c 0%, rgba(0, 0, 0, 0) 100%);
+.map-element {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .grid_container {
@@ -126,12 +140,12 @@ li a:hover:not(.active) {
 }
 
 .card {
-    background-color: #e2e2ef;
-    width: 300px;
+    background-color: #f0f0f0;
+    width: 400px;
     height: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: #2E3440;
+    color: #2e3440;
 }
 
 .photo {
@@ -148,7 +162,8 @@ li a:hover:not(.active) {
 
 .content > h1 {
     font-size: 33px;
-    color: #2E3440;
+    color: #2e3440;
+    text-align: left;
 }
 
 .content > p {
@@ -160,4 +175,64 @@ li a:hover:not(.active) {
     flex-flow: wrap;
     gap: 30px;
     margin: 30px;
+    justify-content: center;
+}
+
+.fa-brands {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10%;
+}
+
+.fa-solid {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10%;
+}
+
+.social-link {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.social-link:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.fa-tiktok {
+    background: linear-gradient(45deg, #00f2ea 0%, #000 50%, #ff0050 100%);
+    color: white;
+}
+
+.whatson-chips {
+    width: 80%;
+    padding: 5px 10%;
+    display: flex
+}
+
+.chip {
+    display: block;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    width: 30%;
+    background-color: #888;
+    margin: 0 2.5%;
+    padding: 10px;
 }
