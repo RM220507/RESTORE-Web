@@ -1,6 +1,6 @@
 body {
     background-color: #f0f0f0;
-    font-family: sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     margin: 0;
 }
 
@@ -11,15 +11,14 @@ root {
 }
 
 .main-header {
-    height: 100vh;
+    height: calc(100% - 80px);
     width: 100vw;
     margin-top: 80px;
-    background-color: black;
 }
 
 .main-background {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 80px);
     position: absolute;
     object-fit: contain;
     pointer-events: none;
@@ -29,7 +28,7 @@ root {
 .header-gradient {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 80px);
     border: none;
     cursor: pointer;
     outline: none;
@@ -199,6 +198,9 @@ h1 {
 .social-link {
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: black;
 }
 
 .social-link:hover {
@@ -206,12 +208,19 @@ h1 {
 }
 
 .fa-facebook {
-    background: #3B5998;
+    background: #3b5998;
     color: white;
 }
 
 .fa-instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
     color: white;
 }
 
@@ -223,16 +232,88 @@ h1 {
 .whatson-chips {
     width: 80%;
     padding: 5px 10%;
-    display: flex
+    display: flex;
 }
 
 .chip {
     display: block;
-    border-radius: 20px;
+    border-radius: 7px;
     font-size: 25px;
     text-align: center;
-    width: 30%;
-    background-color: #888;
+    width: 35%;
+    background-color: #f0f0f0;
     margin: 0 2.5%;
     padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #041c2c;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.chip:hover {
+    background-color: #fff;
+    color: rgb(0, 130, 180);
+}
+
+.project-slide-library {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-flow: wrap;
+}
+
+.project-slide {
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 49%;
+    display: flex;
+    align-items: center;
+}
+
+.project-image {
+    padding: 20px;
+    width: calc(100% - 40px);
+    display: block;
+    margin: auto;
+}
+
+.result-view {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.result-card {
+    display: flex;
+    font-family: sans-serif;
+    background-color: #666;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    padding: 0;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 0.2s;
+    text-decoration: none;
+}
+
+.result-card:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+.result-heading {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+    padding-left: 20px;
+    color: #041c2c;
+}
+
+.result-category {
+    display: none;
 }
