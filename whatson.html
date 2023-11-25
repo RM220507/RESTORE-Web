@@ -6,7 +6,6 @@
 
         <link rel="stylesheet" href="main_styles.css" />
         <link rel="stylesheet" href="navbar_style.css" />
-        <link rel="stylesheet" href="search_styles.css" />
 
         <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     </head>
@@ -27,18 +26,24 @@
                 </div>
                 <div class="whatson-chips">
                     <a class="chip" href="https://seaton.gov.uk/whats-on/">
-                        Visit Seaton Council Website
+                        <p class="chip-text">Visit Seaton Council Website</p>
                     </a>
                     <a class="chip" href="projects.html">
-                        See more RE:STORE Projects
+                        <p class="chip-text">See More RE:STORE Projects</p>
                     </a>
                     <a class="chip" href="images\RESTORE Community Handbook 2023.pdf" download>
-                        Download Community Handbook 2023
+                        <p class="chip-text">Download Community Handbook 2023</p>
                     </a>
                 </div>
             </section>
             <section class="search-section">
-                <div class="result-view">
+                <div class="search-options">
+                    <input class="search-box" id="search-text" onkeyup="filterResults()" placeholder="Search for Community Groups..." />
+                    <select id="search-options" class="search-category" onchange="filterResults()">
+                        <option value="all" selected>All</option>
+                    </select>
+                </div>
+                <div class="result-view" id="results">
                     <a class="result-card" href="http://www.axmouthchildrenstheatre.org.uk/">
                         <p id="name" class="result-heading">
                             Axminster Children's Theatre
@@ -145,7 +150,7 @@
                     </a>
                     <a class="result-card" href="https://www.savefoodhub.org.uk/">
                         <p id="name" class="result-heading">
-                            Save
+                            Save Food Bank
                         </p>
                         <p id="category" class="result-category">
                             Food Support
@@ -160,6 +165,7 @@
                         </p>
                     </a>
                 </div>
+                <script src="search.js"></script>
             </section>
         </div>
     </body>
