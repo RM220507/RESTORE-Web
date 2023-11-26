@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #F0F0F0;
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
 }
@@ -298,7 +298,9 @@ h1 {
     background-color: #666;
     border-radius: 10px;
     width: 60%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
     padding: 0;
     margin-bottom: 10px;
     background-color: #f0f0f0;
@@ -335,14 +337,27 @@ h1 {
     display: flex;
     margin-bottom: 10px;
     justify-content: space-evenly;
+    font-size: 30px;
 }
 
 .search-box {
-    width: 65%;
+    width: 55%;
     margin-left: auto;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    color: #041c2c;
+    box-sizing: border-box;
+    font-size: 30px;
 }
 
 .search-category {
-    width: 10%;
+    width: 20%;
     margin-right: auto;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    color: #041c2c;
+    box-sizing: border-box;
 }
