@@ -1,0 +1,11 @@
+THINGS TO DO
+---------------------------
+What's On layout is completely dead
+Contact Us map needs to wrap
+There's a couple random text issues - they need to disappear (Ryan's job)
+Cards apparently need a bit of tweaking (George's job)
+Transparency on background
+Landing page needs to have the background scale properly (Ryan's job)
+
+Calendar things
+Wordpress integration
