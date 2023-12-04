@@ -82,7 +82,7 @@ root {
     display: flex;
 
     flex-wrap: wrap;
-    min-width: 300px;
+    min-width: 200px;
 
     text-align: center;
     font-size: 22px;
@@ -134,6 +134,12 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+@media only screen and (max-width: 650px) {
+    .map-element {
+        width: 100%;
+    }
+}
+
 .grid_container {
     display: grid;
     grid-template-areas:
@@ -154,6 +160,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #2e3440;
+    margin-bottom: 20px;
 }
 
 .photo {
@@ -181,8 +188,9 @@ h1 {
 .employees_wrapper {
     display: flex;
     flex-flow: wrap;
-    gap: 30px;
+    gap: 10px 30px;
     margin: 30px;
+    margin-bottom: 0px;
     justify-content: center;
 }
 

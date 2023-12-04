@@ -23,6 +23,7 @@
     color: #041c2c;
     border: none;
     display: inline-block;
+    box-sizing: border-box;
 }
 
 .navbar-element:hover {
